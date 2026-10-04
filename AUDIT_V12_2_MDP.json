@@ -1,0 +1,8 @@
+{
+  "formateur": true,
+  "responsable": true,
+  "eleve": true,
+  "no_old_formateur": true,
+  "no_old_responsable": true,
+  "no_old_eleve": true
+}

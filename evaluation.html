@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Évaluation guidée — Bac français</title><link href="styles.css" rel="stylesheet"/></head><body data-auth="required" data-roles="eleve,formateur,responsable">
+<a class="skip-link" href="#content">Aller au contenu</a><a class="skip-link" href="#content">Aller au contenu</a>
+<div class="topbar"><div class="container">
+<span>Projet : Du bac tunisien au bac français</span>
+<span>Candidat individuel • Parcours 2026–2028</span>
+</div></div>
+<header>
+<div class="container nav">
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" type="button">☰ Menu</button><a class="brand" href="index.html"><span class="brand-mark">BF</span><span>Bac français<br/><span class="small">depuis le cursus tunisien</span></span></a>
+<nav aria-label="Navigation principale"><a data-my-space="" href="espace.html">Mon espace</a><a aria-current="page" class="active" href="index.html">Accueil</a><a href="premiere.html">Première</a><a href="parcours-premiere.html">Parcours 1re</a><a href="terminale.html">Terminale</a><a href="parcours-terminale.html">Parcours Tle</a><a href="progression.html">Suivi</a><a href="carnet.html">Carnet</a><a href="annales.html">Annales</a><a href="ressources.html">Ressources</a><a href="recherche.html">Recherche</a></nav>
+</div>
+</header>
+<main id="content">
+<section class="hero"><div class="container"><div class="eyebrow">Évaluation de module</div><h1 id="evalTitle">Évaluation guidée</h1><p class="lead" id="evalObjective"></p></div></section>
+<section class="section"><div class="container eval-sheet">
+<div class="eval-step"><span class="direct-badge">1. Préparation</span><h2>Avant de démarrer</h2><p>Ferme le cours et prépare uniquement le matériel autorisé. Lance un chronomètre pour la durée indiquée.</p><p><strong>Durée :</strong> <span id="evalDuration"></span> minutes.</p></div>
+<div class="eval-step"><span class="direct-badge">2. Sujet</span><h2>Choisir le support d'évaluation</h2><p>Utilise d'abord une ressource d'exercice sans correction visible, puis passe à une annale du chapitre.</p><div class="action-links" id="evalExercises"></div><div class="action-links" id="evalAnnales"></div></div>
+<div class="eval-step"><span class="direct-badge">3. Consigne</span><h2>Critère de réussite</h2><p id="evalNote"></p><p>Corrige ensuite intégralement. Toute erreur de méthode ou notion récurrente doit être ajoutée au <a href="carnet.html"><strong>carnet d'erreurs</strong></a>.</p></div>
+<div class="eval-step"><span class="direct-badge">4. Score</span><h2>Enregistrer le résultat</h2><div class="eval-score"><label>Score /20 <input id="moduleEvalScore" max="20" min="0" step="0.5" type="number"/></label><button class="btn primary" id="saveEvalScore" type="button">Enregistrer</button><span class="small" id="evalSaved"></span></div><p class="small"><strong>&lt; 10 :</strong> reprendre le cours. <strong>10–13,5 :</strong> refaire deux exercices. <strong>≥ 14 :</strong> passer à une annale puis au module suivant.</p></div>
+</div></section>
+</main><footer><div class="container">
+<strong>Du bac tunisien au bac français</strong><br/>
+<span>Site de travail évolutif — version V11 — parcours directement cliquables, 4 octobre 2026.</span>
+<br/><a href="strategie.html">Stratégie du double cursus</a> • <a href="progression.html">Suivi</a></div></footer>
+<script src="auth.js?v=12.1"></script><script src="script.js"></script>
+</body></html>
+<script src="module-actions-data.js"></script><script src="annales-data.js"></script><script src="evaluation.js"></script><script src="script.js"></script>

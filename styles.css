@@ -1,0 +1,335 @@
+
+:root{
+  --bg:#f7f9fc;
+  --surface:#ffffff;
+  --text:#182230;
+  --muted:#667085;
+  --primary:#153b6b;
+  --primary-2:#215c9f;
+  --accent:#d8e9f8;
+  --accent-2:#eef5fb;
+  --border:#d9e2ec;
+  --success:#2f7d4a;
+  --warning:#a35d00;
+  --shadow:0 10px 30px rgba(21,59,107,.08);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}
+.topbar{
+  background:var(--primary);
+  color:#fff;
+  font-size:.92rem;
+}
+.topbar .container{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;flex-wrap:wrap}
+header{
+  background:rgba(255,255,255,.94);
+  position:sticky;top:0;z-index:20;
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(12px);
+}
+.nav{
+  min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.brand{display:flex;align-items:center;gap:.8rem;font-weight:800;color:var(--primary)}
+.brand-mark{
+  width:42px;height:42px;border-radius:13px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  color:#fff;font-weight:900;
+}
+nav{display:flex;gap:.35rem;flex-wrap:wrap;justify-content:flex-end}
+nav a{padding:.55rem .75rem;border-radius:10px;color:#344054;font-weight:650;font-size:.95rem}
+nav a:hover,nav a.active{background:var(--accent-2);color:var(--primary)}
+.hero{
+  padding:72px 0 48px;
+  background:
+    radial-gradient(circle at 88% 10%, #dcecff 0, transparent 28%),
+    linear-gradient(180deg,#fff 0,#f7f9fc 100%);
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:2rem;align-items:center}
+.eyebrow{color:var(--primary-2);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem}
+h1{font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.05;margin:.6rem 0 1rem;color:#102a4c}
+h2{font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.2;color:#153b6b;margin:.2rem 0 1rem}
+h3{color:#153b6b;margin-top:0}
+.lead{font-size:1.15rem;color:#475467;max-width:760px}
+.hero-card,.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  box-shadow:var(--shadow)
+}
+.hero-card{padding:1.4rem}
+.hero-card .big{font-size:2.2rem;font-weight:900;color:var(--primary)}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1rem}
+.chip{background:var(--accent-2);color:var(--primary);padding:.45rem .7rem;border-radius:999px;font-weight:700;font-size:.9rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1rem;border-radius:12px;font-weight:800}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.secondary{background:#fff;border:1px solid var(--border);color:var(--primary)}
+.section{padding:56px 0}
+.section.alt{background:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{padding:1.25rem}
+.card p{color:#667085}
+.kpi{font-size:1.8rem;font-weight:900;color:var(--primary)}
+.timeline{display:grid;gap:1rem}
+.step{display:grid;grid-template-columns:120px 1fr;gap:1rem;align-items:start}
+.step .date{font-weight:900;color:var(--primary)}
+.step .box{background:#fff;border:1px solid var(--border);border-left:5px solid var(--primary-2);padding:1rem;border-radius:14px}
+.table-wrap{overflow:auto;background:#fff;border:1px solid var(--border);border-radius:16px}
+table{width:100%;border-collapse:collapse;min-width:760px}
+th,td{padding:.85rem 1rem;border-bottom:1px solid var(--border);vertical-align:top;text-align:left}
+th{background:var(--primary);color:#fff}
+tr:last-child td{border-bottom:0}
+.notice{background:#eaf4ff;border:1px solid #bfdaf1;border-left:5px solid var(--primary-2);padding:1rem 1.1rem;border-radius:14px}
+.warning{background:#fff7ed;border-color:#fed7aa;border-left-color:#c76b00}
+.checklist{display:grid;gap:.7rem}
+.check{
+  display:flex;gap:.8rem;align-items:flex-start;padding:.85rem 1rem;
+  border:1px solid var(--border);border-radius:12px;background:#fff
+}
+.check input{margin-top:.35rem;transform:scale(1.2)}
+.placeholder{
+  border:2px dashed #b7c7d9;background:#f9fbfd;border-radius:16px;padding:1.1rem;color:#667085
+}
+footer{background:#102a4c;color:#dbe6f3;padding:34px 0;margin-top:40px}
+footer strong{color:#fff}
+.small{font-size:.9rem;color:#667085}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:900px){
+  .hero-grid,.grid,.two-col{grid-template-columns:1fr}
+  nav{display:none}
+  .step{grid-template-columns:1fr}
+}
+
+/* --- Première : programmes, ressources et annales --- */
+.discipline-nav{display:flex;flex-wrap:wrap;gap:.55rem;margin:1.1rem 0 0}
+.discipline-nav a{background:#fff;border:1px solid var(--border);padding:.55rem .75rem;border-radius:999px;font-weight:750;color:var(--primary)}
+.subject{scroll-margin-top:105px;margin-bottom:1.4rem}
+.subject-head{display:flex;justify-content:space-between;gap:1rem;align-items:flex-start;flex-wrap:wrap}
+.subject-badge{font-size:.8rem;font-weight:800;background:var(--accent-2);color:var(--primary);padding:.35rem .6rem;border-radius:999px}
+.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1rem}
+.resource{border:1px solid var(--border);border-radius:14px;padding:1rem;background:#fff}
+.resource strong{display:block;color:var(--primary);margin-bottom:.35rem}
+.resource a{display:inline-block;margin-top:.55rem;color:var(--primary-2);font-weight:800}
+.program-list{columns:2;column-gap:2rem;padding-left:1.2rem}
+.program-list li{break-inside:avoid;margin:.28rem 0}
+.status-ok{color:var(--success);font-weight:800}
+.status-note{color:var(--warning);font-weight:800}
+.source-note{font-size:.9rem;color:#667085;border-top:1px dashed var(--border);padding-top:.8rem;margin-top:1rem}
+@media (max-width:900px){
+  .resource-grid{grid-template-columns:1fr}
+  .program-list{columns:1}
+}
+
+/* --- Bibliothèque Première : cours / exercices / évaluations --- */
+.library-intro{display:grid;grid-template-columns:1.15fr .85fr;gap:1rem;align-items:start}
+.legend{display:flex;gap:.45rem;flex-wrap:wrap;margin:.8rem 0}
+.tag{display:inline-block;padding:.28rem .55rem;border-radius:999px;font-size:.78rem;font-weight:800;border:1px solid var(--border);background:#fff}
+.tag.course{background:#eef6ff;color:#154e86}.tag.ex{background:#edf8f1;color:#216b3a}.tag.eval{background:#fff5e9;color:#965600}.tag.official{background:#f3efff;color:#5d3b9e}
+.accordion{display:grid;gap:.85rem}
+.accordion details{background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.accordion summary{cursor:pointer;padding:1.05rem 1.2rem;font-weight:900;color:var(--primary);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.accordion summary::-webkit-details-marker{display:none}
+.accordion summary:after{content:"+";font-size:1.35rem}
+.accordion details[open] summary:after{content:"–"}
+.accordion .inside{padding:0 1.2rem 1.2rem}
+.chapter-table{width:100%;border-collapse:collapse;min-width:900px}
+.chapter-table th{background:#153b6b;color:#fff}
+.chapter-table td,.chapter-table th{padding:.75rem .8rem;border-bottom:1px solid var(--border);vertical-align:top}
+.chapter-table td:first-child{font-weight:800;color:#153b6b;width:22%}
+.linkset{display:flex;gap:.35rem;flex-wrap:wrap}
+.rlink{display:inline-block;padding:.34rem .48rem;border-radius:8px;background:#f6f8fb;border:1px solid var(--border);font-size:.82rem;font-weight:750;color:#154e86}
+.rlink:hover{background:#eaf2fb}
+.resource-quality{font-size:.85rem;color:#667085;margin-top:.35rem}
+@media(max-width:900px){.library-intro{grid-template-columns:1fr}}
+
+/* --- Parcours autonome Première --- */
+.path-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem;align-items:start}
+.path-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin:.9rem 0}
+.meta-pill{padding:.38rem .65rem;border-radius:999px;background:#fff;border:1px solid var(--border);font-size:.84rem;font-weight:800;color:var(--primary)}
+.module-list{display:grid;gap:1rem}
+.module{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:105px}
+.module summary{cursor:pointer;list-style:none;padding:1.05rem 1.2rem;display:flex;gap:1rem;justify-content:space-between;align-items:center}
+.module summary::-webkit-details-marker{display:none}
+.module-title{display:flex;align-items:center;gap:.8rem}
+.module-num{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:900;flex:0 0 auto}
+.module h3{margin:0}
+.module-body{padding:0 1.2rem 1.2rem}
+.stage-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin:1rem 0}
+.stage{border:1px solid var(--border);border-radius:14px;padding:.85rem;background:#fbfcfe}
+.stage b{display:block;color:var(--primary);margin-bottom:.3rem}
+.taskbox{border-left:4px solid var(--primary-2);background:#f7fbff;padding:.8rem 1rem;border-radius:10px;margin:.8rem 0}
+.mastery{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:1rem}
+.mastery label{display:flex;gap:.55rem;align-items:flex-start;border:1px solid var(--border);border-radius:12px;padding:.7rem;background:#fff}
+.subject-hub{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.subject-card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:1.15rem;box-shadow:var(--shadow)}
+.subject-card h3{margin-bottom:.35rem}
+.subject-card .progress-hint{font-size:.88rem;color:#667085}
+.week-plan{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
+.week{border:1px solid var(--border);border-radius:14px;padding:.9rem;background:#fff}
+.resource-stack{display:grid;gap:.45rem;margin-top:.6rem}
+.resource-stack a{display:block;padding:.5rem .65rem;background:#f6f8fb;border:1px solid var(--border);border-radius:9px;color:#154e86;font-weight:750}
+@media(max-width:950px){
+  .path-hero,.subject-hub,.stage-grid,.mastery,.week-plan{grid-template-columns:1fr}
+}
+
+
+/* --- Audit V7 : navigation, accessibilité, suivi --- */
+.skip-link{position:absolute;left:-9999px;top:0;background:#fff;color:var(--primary);padding:.7rem 1rem;z-index:999;border:2px solid var(--primary)}
+.skip-link:focus{left:1rem;top:1rem}
+.menu-toggle{display:none;border:1px solid var(--border);background:#fff;color:var(--primary);border-radius:10px;padding:.55rem .75rem;font-weight:800;cursor:pointer}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #6aa4d8;outline-offset:3px}
+.progress-panel{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);margin:1rem 0}
+.progress-row{display:flex;justify-content:space-between;gap:1rem;align-items:center;margin-bottom:.45rem}
+.progress-track{height:12px;background:#e8edf3;border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;background:var(--primary-2);width:0;transition:width .25s ease}
+.progress-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.progress-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow)}
+.progress-card h3{margin-bottom:.25rem}
+.toolbar{display:flex;gap:.65rem;flex-wrap:wrap;margin:1rem 0}
+.toolbtn{border:1px solid var(--border);background:#fff;color:var(--primary);padding:.65rem .85rem;border-radius:10px;font-weight:800;cursor:pointer}
+.searchbox{width:100%;padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;font-size:1rem;background:#fff}
+.search-result{padding:1rem;border:1px solid var(--border);border-radius:14px;background:#fff;margin:.65rem 0}
+.search-result small{color:var(--muted)}
+.back-top{position:fixed;right:1rem;bottom:1rem;width:44px;height:44px;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--primary);font-weight:900;box-shadow:var(--shadow);cursor:pointer;display:none;z-index:40}
+.back-top.show{display:block}
+.verified{font-size:.82rem;color:var(--success);font-weight:800}
+@media(max-width:1050px){
+  .menu-toggle{display:inline-flex;align-items:center;gap:.4rem}
+  header .nav{position:relative;min-height:64px}
+  header nav{display:none!important;position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--border);border-radius:0 0 14px 14px;box-shadow:var(--shadow);padding:.6rem;flex-direction:column;z-index:50}
+  header .nav.menu-open nav{display:flex!important}
+  header nav a{width:100%;padding:.75rem .85rem}
+  .progress-grid{grid-template-columns:1fr}
+}
+@media print{
+  .topbar,header,footer,.menu-toggle,.back-top,.toolbar,.btns{display:none!important}
+  body{background:#fff;color:#000}
+  .card,.module,.progress-panel{box-shadow:none!important;border:1px solid #bbb!important}
+  details{break-inside:avoid}
+}
+
+/* --- V8 : carnet, régularité et pont Tunisie → France --- */
+.bridge{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:.9rem 0 1rem}
+.bridge-box{border:1px solid var(--border);border-radius:14px;padding:.85rem 1rem;background:#fff}
+.bridge-box.tn{background:#f1f8ff;border-left:4px solid #2878b8}
+.bridge-box.fr{background:#fff8ed;border-left:4px solid #cc7a00}
+.bridge-box strong{display:block;margin-bottom:.25rem;color:#153b6b}
+.bridge-note{font-size:.84rem;color:#667085;margin-top:.45rem}
+.regularity-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:.8rem 1rem;display:inline-flex;align-items:center;gap:.55rem;font-weight:800;color:#8a4c00}
+.regularity-card .flame{font-size:1.15rem}
+.carnet-form{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+.carnet-form .full{grid-column:1/-1}
+.carnet-form label{font-weight:800;color:#344054}
+.carnet-form input,.carnet-form select,.carnet-form textarea,.carnet-toolbar input,.carnet-toolbar select{width:100%;margin-top:.3rem;padding:.7rem .8rem;border:1px solid var(--border);border-radius:10px;background:#fff;color:var(--text);font:inherit}
+.carnet-toolbar{display:flex;gap:.7rem;flex-wrap:wrap;align-items:end;margin:1rem 0}
+.carnet-toolbar>*{min-width:180px}
+.error-list{display:grid;gap:.9rem}
+.error-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow)}
+.error-card.due{border-left:5px solid #c76b00}.error-card.mastered{opacity:.72;border-left:5px solid var(--success)}
+.error-head{display:flex;justify-content:space-between;gap:.8rem;align-items:start;flex-wrap:wrap}
+.error-meta{display:flex;gap:.45rem;flex-wrap:wrap;margin:.4rem 0}
+.error-section{margin-top:.65rem;padding:.65rem .75rem;background:#f8fafc;border-radius:10px}
+.flashcard{background:#f4f0ff;border:1px solid #ded3ff;border-radius:12px;padding:.75rem;margin-top:.7rem}
+.flash-answer{display:none;margin-top:.5rem}.flashcard.open .flash-answer{display:block}
+.due-badge{font-size:.78rem;font-weight:800;padding:.28rem .5rem;border-radius:999px;background:#fff2df;color:#8a4c00}
+.mastered-badge{font-size:.78rem;font-weight:800;padding:.28rem .5rem;border-radius:999px;background:#edf8f1;color:#216b3a}
+.empty-state{padding:1.2rem;border:2px dashed var(--border);border-radius:14px;color:#667085;text-align:center}
+.today-plan{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:1rem}.today-plan .card{min-height:145px}
+.small-note{font-size:.86rem;color:#667085}
+@media(max-width:900px){.bridge,.carnet-form,.today-plan{grid-template-columns:1fr}.carnet-form .full{grid-column:auto}}
+
+/* --- V9 : comparatif Tunisie ↔ France --- */
+.compare-legend{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.ov{display:inline-flex;align-items:center;gap:.35rem;padding:.32rem .58rem;border-radius:999px;font-size:.8rem;font-weight:850;border:1px solid var(--border)}
+.ov.green{background:#eaf8ef;color:#216b3a}.ov.yellow{background:#fff6df;color:#8a6000}
+.ov.blue{background:#eaf4ff;color:#185b91}.ov.gray{background:#f2f4f7;color:#475467}.ov.red{background:#fff0f0;color:#a33131}
+.compare-table td:first-child{font-weight:800;color:var(--primary)}
+.compare-table .focus{font-size:.88rem;color:#667085;margin-top:.25rem}
+.diagnostic-box{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow)}
+.diagnostic-scale{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:.8rem}
+.diagnostic-scale>div{padding:.8rem;border-radius:12px;border:1px solid var(--border);background:#fbfcfe}
+.source-list{display:grid;gap:.55rem}
+.source-list a{display:block;padding:.6rem .75rem;border:1px solid var(--border);border-radius:10px;background:#fff;color:#154e86;font-weight:750}
+.bridge-summary{margin:1rem 0;padding:1rem;border-radius:16px;border:1px solid var(--border);background:#fbfcfe}
+@media(max-width:900px){.diagnostic-scale{grid-template-columns:1fr}}
+
+/* --- V10 : Banque d'annales --- */
+.annales-toolbar{display:grid;grid-template-columns:repeat(6,1fr);gap:.65rem;margin:1rem 0}
+.annales-toolbar label{font-weight:800;font-size:.86rem;color:#344054}
+.annales-toolbar select,.annales-toolbar input{width:100%;margin-top:.3rem;padding:.68rem .72rem;border:1px solid var(--border);border-radius:10px;background:#fff;font:inherit}
+.annales-stats{display:flex;gap:.55rem;flex-wrap:wrap;margin:.8rem 0 1.2rem}
+.annales-list{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
+.annale-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.55rem}
+.annale-card h3{margin:0;color:var(--primary)}
+.annale-badges{display:flex;gap:.35rem;flex-wrap:wrap}
+.ab{display:inline-flex;padding:.25rem .48rem;border-radius:999px;font-size:.75rem;font-weight:850;border:1px solid var(--border);background:#f7f8fa}
+.ab.year{background:#eef6ff;color:#154e86}.ab.diff{background:#fff4df;color:#885400}.ab.type{background:#f3efff;color:#5d3b9e}.ab.ok{background:#edf8f1;color:#216b3a}.ab.warn{background:#fff0f0;color:#9f2f2f}
+.annale-actions{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:auto}
+.annale-progress{display:grid;grid-template-columns:auto 110px;gap:.6rem;align-items:center;border-top:1px dashed var(--border);padding-top:.65rem}
+.annale-progress label{display:flex;gap:.4rem;align-items:center;font-weight:750}
+.annale-progress input[type=number]{width:80px;padding:.4rem;border:1px solid var(--border);border-radius:8px}
+.module-annales{margin-top:1rem;border-top:1px dashed var(--border);padding-top:.9rem}
+.module-annales h4{margin:.1rem 0 .6rem;color:var(--primary)}
+.module-annales-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
+.mini-annale{border:1px solid var(--border);border-radius:12px;padding:.7rem;background:#fbfcfe}
+.mini-annale strong{display:block;margin-bottom:.25rem}
+.mini-annale .small{display:block;margin:.2rem 0 .45rem}
+.bank-warning{background:#fff8ed;border-left:4px solid #cc7a00;border-radius:10px;padding:.8rem 1rem;margin:.8rem 0}
+@media(max-width:1100px){.annales-toolbar{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){.annales-toolbar,.annales-list,.module-annales-grid{grid-template-columns:1fr}}
+
+/* --- V11 : modules réellement cliquables --- */
+.stage.action-stage{display:flex;flex-direction:column;gap:.5rem;min-height:185px}
+.stage.action-stage b{font-size:1rem}
+.action-links{display:grid;gap:.42rem;margin-top:.25rem}
+.action-link{display:block;padding:.55rem .65rem;border:1px solid var(--border);border-radius:10px;background:#fff;color:#154e86;font-weight:800;font-size:.86rem;line-height:1.25}
+.action-link:hover{background:#eef6ff;text-decoration:none}
+.action-link.course{border-left:4px solid #2878b8}
+.action-link.exercise{border-left:4px solid #2f855a}
+.action-link.eval{border-left:4px solid #c56b00}
+.action-link.annale{border-left:4px solid #6b46c1}
+.stage-help{font-size:.78rem;color:#667085;margin-top:auto}
+.eval-sheet{display:grid;gap:1rem}
+.eval-step{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1rem}
+.eval-score{display:flex;gap:.7rem;flex-wrap:wrap;align-items:center}
+.eval-score input{width:90px;padding:.6rem;border:1px solid var(--border);border-radius:9px;font:inherit}
+.direct-badge{display:inline-flex;padding:.25rem .5rem;border-radius:999px;background:#edf8f1;color:#216b3a;font-size:.76rem;font-weight:850}
+@media(max-width:900px){.stage.action-stage{min-height:auto}}
+
+/* --- V12 : portail centres de formation + rôles --- */
+.auth-loading body{visibility:hidden}
+.portal-hero{text-align:center;padding:3.8rem 0 2.4rem}
+.portal-hero h1{max-width:900px;margin:.3rem auto .8rem}
+.portal-hero .lead{max-width:820px;margin-left:auto;margin-right:auto}
+.portal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.4rem}
+.login-card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:1.2rem;box-shadow:var(--shadow);text-align:left}
+.login-card h2{margin:.2rem 0 .35rem;font-size:1.25rem}
+.login-card .role-icon{font-size:2rem}
+.login-form{display:grid;gap:.65rem;margin-top:1rem}
+.login-form input[type=password],.login-form input[type=text]{width:100%;padding:.78rem .85rem;border:1px solid var(--border);border-radius:10px;font:inherit}
+.login-error{color:#a33131;font-weight:800;font-size:.86rem}
+.password-row{display:flex;gap:.45rem;align-items:center;font-size:.84rem;color:#667085}
+.portal-note{margin-top:1.2rem;padding:1rem;border:1px solid var(--border);background:#fff8ed;border-radius:14px}
+.quick-access{max-width:720px;margin:1.2rem auto 0;padding:1rem;border:1px solid #b7dbc4;background:#eff9f2;border-radius:14px}
+.role-badge{display:inline-flex;align-items:center;padding:.26rem .5rem;border-radius:999px;background:#eef6ff;color:#154e86;font-size:.75rem;font-weight:850;white-space:nowrap}
+.nav-logout{border:1px solid var(--border);background:#fff;border-radius:9px;padding:.45rem .6rem;font:inherit;font-size:.78rem;font-weight:800;color:#8a2f2f;cursor:pointer}
+.role-dashboard{display:grid;grid-template-columns:1.4fr .8fr;gap:1rem}
+.dashboard-actions{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+.dashboard-action{display:block;padding:1rem;border:1px solid var(--border);border-radius:14px;background:#fff;box-shadow:var(--shadow);color:var(--text)}
+.dashboard-action strong{display:block;color:var(--primary);margin-bottom:.25rem}
+.dashboard-action:hover{text-decoration:none;background:#f8fbff}
+.role-callout{border-left:4px solid #2878b8;background:#f1f8ff;padding:1rem;border-radius:12px}
+.center-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem}
+.center-flow .card{min-height:150px}
+@media(max-width:1000px){.portal-grid,.center-flow{grid-template-columns:1fr 1fr}.role-dashboard{grid-template-columns:1fr}}
+@media(max-width:720px){.portal-grid,.center-flow,.dashboard-actions{grid-template-columns:1fr}}

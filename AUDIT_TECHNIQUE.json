@@ -1,0 +1,10 @@
+{
+  "html_files": 31,
+  "local_missing": [],
+  "duplicate_ids": [],
+  "nav_variants": {
+    "('index.html', 'premiere.html', 'parcours-premiere.html', 'terminale.html', 'parcours-terminale.html', 'progression.html', 'ressources.html', 'recherche.html')": 31
+  },
+  "input_id_collisions": {},
+  "checkbox_ids": 545
+}

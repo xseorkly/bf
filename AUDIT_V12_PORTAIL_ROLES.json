@@ -1,0 +1,14 @@
+{
+  "protected_html_pages": 41,
+  "public_entry_pages": [
+    "espace.html",
+    "index.html"
+  ],
+  "roles": {
+    "formateur": "ZESE2027",
+    "responsable": "ZESECENTRE27 (provisoire)",
+    "eleve": "ZESE27"
+  },
+  "missing_internal_links": [],
+  "security_note": "Client-side password gate only; suitable for pilot testing, not strong protection on a public static host."
+}

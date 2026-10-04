@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Carnet d'erreurs et révisions — Bac français</title><link href="styles.css" rel="stylesheet"/>
+<meta content="Carnet d'erreurs, flashcards et révisions espacées du parcours bac français." name="description"/></head><body data-auth="required" data-roles="eleve,formateur,responsable">
+<a class="skip-link" href="#content">Aller au contenu</a><a class="skip-link" href="#content">Aller au contenu</a>
+<div class="topbar"><div class="container">
+<span>Projet : Du bac tunisien au bac français</span>
+<span>Candidat individuel • Parcours 2026–2028</span>
+</div></div>
+<header>
+<div class="container nav">
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" type="button">☰ Menu</button><a class="brand" href="index.html"><span class="brand-mark">BF</span><span>Bac français<br/><span class="small">depuis le cursus tunisien</span></span></a>
+<nav aria-label="Navigation principale"><a data-my-space="" href="espace.html">Mon espace</a><a aria-current="page" class="active" href="index.html">Accueil</a><a href="premiere.html">Première</a><a href="parcours-premiere.html">Parcours 1re</a><a href="terminale.html">Terminale</a><a href="parcours-terminale.html">Parcours Tle</a><a href="progression.html">Suivi</a><a aria-current="page" class="active" href="carnet.html">Carnet</a><a href="ressources.html">Ressources</a><a href="recherche.html">Recherche</a></nav>
+</div>
+</header>
+<main id="content">
+<section class="hero"><div class="container path-hero"><div><div class="eyebrow">Outil d'apprentissage</div><h1>Carnet d'erreurs &amp; révisions</h1>
+<p class="lead">Transforme chaque erreur en règle de réussite : note l'erreur, écris la correction, programme une révision et crée, si besoin, une mini-flashcard.</p></div>
+<div class="hero-card"><h3>La règle des 3 temps</h3><p><strong>J0 :</strong> comprendre et corriger.<br/><strong>J+2 :</strong> refaire sans aide.<br/><strong>J+7 :</strong> vérifier que l'erreur ne revient plus.</p>
+<p class="small">Le carnet est enregistré localement et inclus dans l'export du tableau de bord.</p></div></div></section>
+<section class="section"><div class="container"><h2>Ajouter une erreur</h2>
+<form class="card carnet-form" id="errorForm">
+<label>Matière<select id="errSubject" required=""><option value="">Choisir…</option><option>Mathématiques</option><option>Physique-Chimie</option><option>NSI</option><option>Français</option><option>Histoire-Géographie</option><option>Arabe LVA</option><option>Anglais LVB</option><option>Enseignement scientifique</option><option>EMC</option><option>Philosophie</option><option>Grand oral</option><option>EPS</option></select></label>
+<label>Chapitre / module<input id="errChapter" placeholder="Ex. Limites, Acide-base, commentaire…"/></label>
+<label class="full">Erreur commise<textarea id="errMistake" placeholder="Qu'est-ce qui m'a fait perdre des points ?" required="" rows="3"></textarea></label>
+<label class="full">Correction / règle à retenir<textarea id="errFix" placeholder="Quelle règle ou méthode dois-je appliquer la prochaine fois ?" required="" rows="3"></textarea></label>
+<label>Question flashcard (facultatif)<input id="errQuestion" placeholder="Ex. Quand peut-on utiliser le TVI ?"/></label>
+<label>Réponse flashcard (facultatif)<input id="errAnswer" placeholder="Réponse courte à mémoriser"/></label>
+<div class="full btns"><button class="btn primary" type="submit">Ajouter au carnet</button></div></form></div></section>
+<section class="section alt"><div class="container"><div class="subject-head"><div><h2>Mes erreurs à revoir</h2><p class="small">Les entrées dues aujourd'hui remontent en tête.</p></div><div><span class="meta-pill" id="carnetCount">0 entrée</span></div></div>
+<div class="carnet-toolbar"><label>Filtrer par matière<select id="filterSubject"><option value="">Toutes</option></select></label><label>État<select id="filterStatus"><option value="">Tous</option><option value="due">À revoir</option><option value="mastered">Maîtrisées</option></select></label><label>Recherche<input id="filterText" placeholder="mot-clé…"/></label></div>
+<div class="error-list" id="errorList"></div></div></section></main><footer><div class="container">
+<strong>Du bac tunisien au bac français</strong><br>
+<span>Site de travail évolutif — version V11 — parcours directement cliquables, 4 octobre 2026.</span>
+<br><a href="strategie.html">Stratégie du double cursus</a> • <a href="progression.html">Suivi</a></br></br></div></footer>
+<script src="auth.js?v=12.1"></script><script src="script.js"></script>
+</body></html><script src="carnet.js"></script>

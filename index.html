@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>BacPasserelle Centre — Accès</title>
+<link href="styles.css" rel="stylesheet"/>
+<meta name="description" content="Portail d'accès BacPasserelle pour les centres de formation, les formateurs et les candidats au bac français."/>
+</head>
+<body>
+<div class="topbar"><div class="container"><span>BacPasserelle Centre</span><span>Du cursus tunisien au baccalauréat français</span></div></div>
+<main id="content">
+<section class="portal-hero">
+<div class="container">
+<div class="eyebrow">Portail centre de formation</div>
+<h1>Un cadre commun pour préparer le bac français depuis le système tunisien</h1>
+<p class="lead">Choisissez votre espace. Chaque profil accède au même référentiel, mais avec une entrée adaptée à son rôle : piloter, enseigner ou apprendre.</p>
+
+<div id="quick-access" class="quick-access" hidden>
+<strong>Session déjà ouverte :</strong> <span id="quick-role"></span>
+<div class="btns"><a id="quick-go" class="btn primary" href="#">Accéder à mon espace</a><button class="btn secondary" type="button" data-clear-session>Changer de profil</button></div>
+</div>
+
+<div class="portal-grid">
+<article class="login-card">
+<div class="role-icon">👨‍🏫</div>
+<h2>Formateur</h2>
+<p>Accéder au cadre pédagogique, aux parcours, aux ressources, aux exercices, aux évaluations et aux annales.</p>
+<form class="login-form" data-login-role="formateur">
+<label><strong>Mot de passe formateur</strong><input type="password" autocomplete="current-password" required placeholder="Mot de passe"/></label>
+<label class="password-row"><input class="reveal-password" type="checkbox"/> Afficher le mot de passe</label>
+<div class="login-error" hidden></div>
+<button class="btn primary" type="submit">Entrer dans l’espace formateur</button>
+</form>
+</article>
+
+<article class="login-card">
+<div class="role-icon">🧭</div>
+<h2>Responsable de centre</h2>
+<p>Piloter l’organisation, comprendre le cadre français, suivre les progressions et préparer le travail des formateurs.</p>
+<form class="login-form" data-login-role="responsable">
+<label><strong>Mot de passe responsable</strong><input type="password" autocomplete="current-password" required placeholder="Mot de passe"/></label>
+<label class="password-row"><input class="reveal-password" type="checkbox"/> Afficher le mot de passe</label>
+<div class="login-error" hidden></div>
+<button class="btn primary" type="submit">Entrer dans l’espace responsable</button>
+</form>
+</article>
+
+<article class="login-card">
+<div class="role-icon">🎓</div>
+<h2>Élève / candidat</h2>
+<p>Voir directement quoi travailler, dans quel ordre, avec les cours, exercices, évaluations et annales associés.</p>
+<form class="login-form" data-login-role="eleve">
+<label><strong>Mot de passe candidat</strong><input type="password" autocomplete="current-password" required placeholder="Mot de passe"/></label>
+<label class="password-row"><input class="reveal-password" type="checkbox"/> Afficher le mot de passe</label>
+<div class="login-error" hidden></div>
+<button class="btn primary" type="submit">Entrer dans l’espace candidat</button>
+</form>
+</article>
+</div>
+
+<div class="portal-note">
+<strong>Version pilote :</strong> ce verrou est volontairement simple et fonctionne côté navigateur. Il convient pour tester le fonctionnement des trois espaces, mais il ne constitue pas encore une protection forte pour un site GitHub public. Pour une mise en production réellement privée, les pages devront ensuite être chiffrées ou protégées côté serveur.
+</div>
+<p class="small" style="margin-top:1rem">Si le bouton « Accéder à mon espace » a déjà été affiché, il doit maintenant ouvrir directement le tableau de bord correspondant.</p></div>
+</section>
+</main>
+<script src="auth-config.js?v=12.1"></script>
+<script src="login.js?v=12.1"></script>
+</body>
+</html>

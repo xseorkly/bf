@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"/><title>Mon espace</title></head><body>
+<script>
+(function(){
+  const q=new URLSearchParams(location.search).get('role');
+  let r=q; try{r=r||localStorage.getItem('bac_fr_role')||sessionStorage.getItem('bac_fr_role')}catch(e){}
+  const m={eleve:'espace-eleve.html',formateur:'espace-formateur.html',responsable:'espace-responsable.html'};
+  location.replace((m[r]||'index.html')+(m[r]?'?role='+encodeURIComponent(r):''));
+})();
+</script></body></html>

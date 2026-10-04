@@ -1,0 +1,4 @@
+{
+  "missing_internal_links": [],
+  "fix": "query-role + localStorage + sessionStorage + cookie fallbacks; role propagated to all internal links"
+}

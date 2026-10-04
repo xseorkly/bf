@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Banque d'annales Première + Terminale</title><link href="styles.css" rel="stylesheet"/>
+<meta content="Banque d'annales et sujets d'entraînement classés par niveau, matière, chapitre, difficulté et année." name="description"/></head><body data-auth="required" data-roles="eleve,formateur,responsable">
+<a class="skip-link" href="#content">Aller au contenu</a><a class="skip-link" href="#content">Aller au contenu</a>
+<div class="topbar"><div class="container">
+<span>Projet : Du bac tunisien au bac français</span>
+<span>Candidat individuel • Parcours 2026–2028</span>
+</div></div>
+<header>
+<div class="container nav">
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" type="button">☰ Menu</button><a class="brand" href="index.html"><span class="brand-mark">BF</span><span>Bac français<br/><span class="small">depuis le cursus tunisien</span></span></a>
+<nav aria-label="Navigation principale"><a data-my-space="" href="espace.html">Mon espace</a><a aria-current="page" class="active" href="index.html">Accueil</a><a href="premiere.html">Première</a><a href="parcours-premiere.html">Parcours 1re</a><a href="terminale.html">Terminale</a><a href="parcours-terminale.html">Parcours Tle</a><a href="progression.html">Suivi</a><a href="carnet.html">Carnet</a><a aria-current="page" class="active" href="annales.html">Annales</a><a href="ressources.html">Ressources</a><a href="recherche.html">Recherche</a></nav>
+</div>
+</header>
+<main id="content">
+<section class="hero"><div class="container path-hero"><div><div class="eyebrow">Première + Terminale</div>
+<h1>Banque d’annales &amp; sujets d’entraînement</h1>
+<p class="lead">Une banque structurée par <strong>matière, chapitre, difficulté et année</strong>, reliée automatiquement aux modules des parcours.</p>
+<div class="annales-stats"><span class="meta-pill" id="annalesCount">0 ressource</span><span class="meta-pill" id="realAnnalesCount">0 annale</span></div>
+</div><div class="hero-card"><h3>Comment l'utiliser ?</h3><p><strong>Chapitre en cours :</strong> fais d'abord une annale ciblée. <strong>À partir d'avril :</strong> bascule vers les sujets complets chronométrés. Enregistre le score pour repérer les chapitres fragiles.</p></div></div></section>
+<section class="section"><div class="container">
+<div class="bank-warning"><strong>Important :</strong> « difficulté » est une classification éditoriale du site, pas une note officielle. Les archives E3C et anciennes évaluations sont signalées comme telles. Pour EMC, Grand oral et EPS, il n'existe pas de banque publique d'annales comparable aux écrits terminaux : le site affiche le cadre officiel au lieu d'inventer des sujets.</div>
+<div class="annales-toolbar">
+<label>Niveau<select id="fLevel"><option value="">Première + Terminale</option><option>Première</option><option>Terminale</option></select></label>
+<label>Matière<select id="fSubject"></select></label>
+<label>Chapitre<select id="fChapter"><option value="">Tous chapitres</option></select></label>
+<label>Difficulté<select id="fDifficulty"></select></label>
+<label>Année<select id="fYear"></select></label>
+<label>Type<select id="fType"></select></label>
+<label>État<select id="fStatus"><option value="">Tous</option><option value="todo">À faire</option><option value="done">Faits</option></select></label>
+<label style="grid-column:span 2">Recherche<input id="fText" placeholder="Ex. dérivation, théâtre, climat, 2026…"/></label>
+</div>
+<div class="annales-list" id="annalesList"></div>
+</div></section>
+</main><footer><div class="container">
+<strong>Du bac tunisien au bac français</strong><br/>
+<span>Site de travail évolutif — version V11 — parcours directement cliquables, 4 octobre 2026.</span>
+<br/><a href="strategie.html">Stratégie du double cursus</a> • <a href="progression.html">Suivi</a></div></footer>
+<script src="auth.js?v=12.1"></script><script src="script.js"></script>
+</body></html>
+<script src="annales-data.js"></script><script src="annales.js"></script><script src="script.js"></script>
